@@ -1,7 +1,8 @@
 import React from 'react';
+
 import './ExpenseItem.css';
 
-export const ExpenseItem = () => {
+const ExpenseItem = () => {
   return (
     <div className="expense-item">
       <div>March 28th 2021</div>
@@ -12,3 +13,5 @@ export const ExpenseItem = () => {
     </div>
   );
 };
+
+export default ExpenseItem;
