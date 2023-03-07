@@ -24,10 +24,15 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log(`From App.jsx: ${expense}`);
+    console.log(expense);
+  };
+
   return (
     <div>
       <h1 style={{ textAlign: 'center', color: 'white' }}>Expense Tracker</h1>
-      <NewExpense />
+      <NewExpense recieveNewExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
