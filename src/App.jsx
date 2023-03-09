@@ -2,7 +2,8 @@ import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
-  const expenses = [
+  const [expenses, setExpenses] = useState(expensesArr);
+  const expensesArr = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -25,8 +26,9 @@ function App() {
   ];
 
   const addExpenseHandler = (expense) => {
-    console.log(`From App.jsx: ${expense}`);
-    console.log(expense);
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   };
 
   return (
